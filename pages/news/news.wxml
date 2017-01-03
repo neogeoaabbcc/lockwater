@@ -1,0 +1,22 @@
+<scroll-view class="container" scroll-y="true" >
+    <view class="news">
+        <view class="news-header">
+            <text class="news-title">{{news.title}}</text>	
+            <text class="news-time" wx:if="{{news.created}}">
+                <icon type="waiting" size="45" color="red"/>
+                发布于{{news.created}}
+            </text>
+            <text class="news-time" wx:else>
+                <icon type="waiting" size="45" color="red"/>
+                发布于2016-10-27
+            </text>
+        </view>
+        <image class="news-ad" src="{{news.pic}}" wx:if="{{news.pic}}" />
+        <image class="news-ad" src="{{ads}}" wx:elif="{{ads}}" />
+        <image class="news-ad" src="/images/1.jpg" wx:else />
+        <view class="news-box">
+            {{news.content}}
+        </view>
+    </view>
+ 
+</scroll-view>

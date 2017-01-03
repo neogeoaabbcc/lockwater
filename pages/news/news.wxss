@@ -1,0 +1,47 @@
+.news{
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+}
+.news-header{
+    display:flex;
+    flex:1;
+    flex-direction:column;
+    padding:20rpx 30rpx;
+    margin-bottom:30rpx;
+}
+.news-title{
+    display:flex;
+    margin-bottom:20rpx;
+    font-size:40rpx;
+    color:#333;
+}
+.news-time{
+    font-size:24rpx;
+    color:#aaa;
+}
+.news-ad{
+    width:100%;
+}
+.news-box{
+    overflow:hidden;
+    padding:40rpx 20rpx;
+    font-size:34rpx;
+}
+
+.section{
+    display:flex;
+    flex-direction:column;
+    padding:10rpx;
+    margin-bottom:40rpx;
+}
+.video{
+    width:100%;
+}
+.music-btn{
+    display:flex;
+    flex-direction:row;
+}
+.music-btn button{
+    font-size:24rpx;
+}

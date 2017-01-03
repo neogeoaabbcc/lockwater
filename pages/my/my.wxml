@@ -1,0 +1,49 @@
+<view class="container">
+    <scroll-view >
+        <!--微信用户信息-->
+        <view class="title">1.微信用户信息</view>
+        <view class="userinfo">
+            <image class="avatar" src="{{uinfo.avatarUrl}}" />
+            <view class="userino-text">
+                <text class="nickname">{{uinfo.nickName}}</text>
+                <text wx:if="{{uinfo.gender==1}}">男</text>
+                <text wx:else>女</text>
+                <text>{{uinfo.province}}-{{uinfo.city}}</text>
+            </view>
+        </view>
+
+        <!--用户缓存-->
+        <view class="title">2.用户缓存</view>
+        <view class="userinfo">
+            <!--图片上传-->
+            <view class="section">
+                <block wx:for="{{images}}">
+                    <image class="avatar" wx:if="{{item}}" src="{{item}}" />
+                    <image class="avatar" wx:else src="{{user.header}}" />
+                </block>
+                <button class="btn" bindtap="bindUploadHeader">上传图片</button>
+            </view>
+            <view class="userino-text">
+                <text class="nickname">{{user.name}}</text>
+                <text>{{user.gender}}</text>
+                <text>{{user.phone}}</text>
+            </view>
+        </view>
+
+        <!--下载-->
+        <view class="title">3.下载</view>
+        <view class="userinfo">
+            <button class="btn" bindtap="bindDownloadFile">下载</button>
+            <image class="avatar" src="{{downloadFile}}" />
+        </view>
+
+        <!--获取本地保存的文件-->
+        <view class="title">3.获取本地保存的文件</view>
+        <view class="userinfo">
+            <button class="btn" bindtap="bindGetSavedFile">获取</button>
+        </view>
+
+    
+   </scroll-view> 
+
+</view>

@@ -1,0 +1,49 @@
+{
+  "pages":[
+    
+    "pages/index/index",
+    "pages/login/login",
+    "pages/my/my",
+    "pages/waterfall/waterfall",
+    "pages/news/news",
+    "pages/splash/splash"
+  ],
+  "window":{
+    "backgroundTextStyle":"#999",
+    "navigationBarBackgroundColor": "#272636",
+    "navigationBarTitleText": "微信小程序",
+    "navigationBarTextStyle":"#fff"
+  },
+	"tabBar": {
+		"color": "#fff",
+		"selectedColor": "#eb4f38",
+		"backgroundColor": "#333",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+				"selectedIconPath": "images/home_actived.png"
+      }, 
+      {
+        "pagePath": "pages/waterfall/waterfall",
+        "text": "瀑布流",
+        "iconPath": "images/waterfall.png",
+				"selectedIconPath": "images/waterfall_actived.png"
+      },
+      {
+        "pagePath": "pages/login/login",
+        "text": "我的",
+        "iconPath": "images/my.png",
+				"selectedIconPath": "images/my_actived.png"
+      }
+    ]
+  },
+	"networkTimeout": {
+		"request": 10000,
+		"downloadFile": 10000
+	},
+	"debug": true,
+  "name": "yyb@4000871428.com",
+   "pwd": "ynqc975132468"
+}

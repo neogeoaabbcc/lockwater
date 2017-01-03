@@ -1,0 +1,11 @@
+<!--今日头条-->
+<template name="header-list">
+    <block wx:for="{{headerList}}" wx:for-index="index" wx:for-item="vo">
+        <navigator url="../news/news?id={{vo.id}}&image={{vo.images}}">
+            <view class="item">
+            <image src="{{vo.images}}" mode="aspectFill"/>
+            <text>{{vo.title}}</text>
+            </view>
+        </navigator>
+    </block>
+</template>

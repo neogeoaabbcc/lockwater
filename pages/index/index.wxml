@@ -1,0 +1,60 @@
+<!--index.wxml-->
+<!--引入模板-->
+<import src="../template/index"/>
+
+<view class="container">
+    <!--banner-->
+    <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item class="swiper-item">
+          <image src="{{item}}" class="slide-image" mode="scaleToFill"/>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <!--scroll-view-->
+    <scroll-view class="container" scroll-y="true">
+      <!--今日头条-->
+      <view class="section">
+        <view class="section-header" bindtap="bindMoreTap">
+          <text class="fl title">今日头条</text>
+          <text class="fr more"> >> </text>
+        </view>
+        <scroll-view class="scroll-view" scroll-x="true" >
+          <view class="box">
+            <template is="header-list" data="{{headerList}}" />
+          </view>
+        </scroll-view>
+      </view>
+
+      <!--今日鸡汤-->
+      <view class="section">
+        <view class="section-header" bindtap="bindMoreTap">
+          <text class="fl title">今日鸡汤</text>
+          <text class="fr more"> >> </text>
+        </view>
+        <scroll-view class="scroll-view" scroll-x="true" >
+          <view class="box">
+            <template is="header-list" data="{{headerList}}" />
+          </view>
+        </scroll-view>
+      </view>
+
+      <!--今日推荐-->
+      <view class="section">
+        <view class="section-header" bindtap="bindMoreTap">
+          <text class="fl title">今日推荐</text>
+          <text class="fr more"> >> </text>
+        </view>
+        <scroll-view class="scroll-view" scroll-x="true" >
+          <view class="box">
+            <template is="header-list" data="{{headerList}}" />
+          </view>
+        </scroll-view>
+      </view>
+      
+    </scroll-view>
+
+   
+
+</view>

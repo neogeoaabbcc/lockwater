@@ -1,0 +1,9 @@
+<!--splash-->
+<view class="container">
+  <swiper class="splash" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+    <swiper-item wx:for="{{splashList}}" wx:for-index="index">
+      <image src="{{item}}" class="slide-image" mode="aspectFill"/>
+      <button class="splash_btn" bindtap="handleStart" wx:if="{{index == splashList.length - 1}}">立即体验</button>
+    </swiper-item>
+  </swiper>
+</view>
