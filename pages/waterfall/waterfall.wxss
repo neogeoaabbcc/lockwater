@@ -1,84 +1,68 @@
 /**waterfall.wxss**/
-.header {
-	width:100%;
-	height:88rpx;
-	margin:4rpx;
+.head_logo{
+  width: 100%;
+  height: 114px;
 }
-.header input {
-	box-sizing:border-box;
-	width:99%;
-	height:80rpx;
-	line-height:80rpx;
-	padding-left:40rpx;
-	color: #999;
-	font-size: 28rpx;
-	border:1px solid #ddd;
-	box-shadow:inset 1rpx 4rpx 6rpx #999;
+.logo{
+  width: 100%;
 }
-/**/
-.list{
-	overflow:hidden;
-	display:flex;
-	flex-direction:row;
-	width:100%;
+.map_view{
+  width: 100%;
+  height: 50px;
+  background-color: yellowgreen;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  font-size: 48rpx;
+  color: aliceblue;
 }
-.column{
-	display:inline-box;
-	width:49%;
+.btn_image{
+  width: 40%;
+
 }
-.list .column:first-child{
-	float:left;
-	margin-right:1%;
+.btn_img{
+  width: 100%;
 }
-.list .column:last-child{
-	float:right;
-	margin-left:1%;
-}
-.item{
-	display:flex;
-	flex:1;
-	flex-direction: column;
-	padding-bottom:30rpx;
-	margin-bottom:30rpx;
-	background:#fff;
-	box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.12);
-}
-.item .img{
-	width:100%;
-	height:200rpx;
+.call{
+  width:86px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 20rpx;
+  display:inline-block;
+  top:11px;
 }
 
-.item .title, .item .text{
-	padding:0px 8px;
-	overflow:hidden;
+.navbut_hover{
+  width: 110px;
+  background-color:yellowgreen;
+  border:2px solid white;
 }
-.item .title{
-	display:block;
-	padding:20rpx 16rpx;
-	margin-bottom:10rpx;
-	font-size:34repx;
-	color:#333;
+.navbut{
+  display: inline-block;
+  width: 110px;
+  height: 40px;
+  line-height: 40px;
+  border:2px solid yellowgreen;
+  }
+.btn_view{
+  background-color: ghostwhite;
+  line-height: 22px;
+  width: 60%;
 }
-.item .text{
-	max-height:120rpx;
-	line-height:40rpx;
-	font-size:28rpx;
-	color:#333;
+.btn_text{
+  width: 100%; 
+  font-size: 26rpx;
 }
-.tips{
-	overflow:hidden;
-	text-align:center;
-	margin:40rpx 0 60rpx;
-	font-size:28rpx;
-	color:#aaa;
+.btn_button{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.tips .tips_load{
-	float:left;
-	width:100rpx;
-	height:100rpx;
-	padding-left:30%;
-}
-.tips .tips_text{
-	float:left;
-	margin-top:40rpx;
+.btn_image_text{
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+  
 }

@@ -1,32 +1,25 @@
-<view class="contaion">
-    <view class="section-header">
-        <image class="avatar" src="/images/header.jpg" />
+<!-- 我的预约.wxml -->
+<view class="header">
+  <view wx:if="{{length == 0}}" class="header_my">
+    <icon type="warn" size="30"></icon>
+    <text class="header_my_text1">请输入你的联系方式</text>
+    <view class="header_edit" bindtap="onEdit">></view>
+  </view>
+  <view wx:elif="{{length == 1}}" class="header_my">
+     <text class="header_my_text2">{{edit}}</text>
+     <view class="header_edit" bindtap="onEdit">></view>
+  </view>
+   <image class="header_line" src="../../images/line.png"></image>
+  <form bindsubmit="formSubmit" bindreset="formReset" >
+    <view class="header_background">
+      <picker mode="multiSelector" bindchange="bindChange" bindcolumnchange="bindColumnChange" value="{{productIndex}}" range="{{productArray}}">
+        <view class="picker">
+          产品选择：{{productIndex[0][productArray[0]]}},{{productIndex[1][productArray[1]]}}
+        </view>
+      </picker>
     </view>
-    <view class="section">
-        <form bindsubmit="formSubmit" bindreset="formReset" report-submit="true">
-            <view class="item">
-                <view class="user">用户：</view>
-                <input type="text" name="name" placeholder-class="color" placeholder="请输入用户名称" value="admin" />
-            </view>
-            <view class="item">
-                <view class="pwd">密码：</view>
-                <input password name="passwd" placeholder-class="color" placeholder="请输入密码" value="admin" />
-            </view>
-            <!--<view class="item">
-                <view class="sex">性别：</view>
-                <radio-group name="sex">
-                    <label><radio value="1" checked/>男</label>
-                    <label><radio value="0"/>女</label>
-                </radio-group>
-            </view>-->
-            <view class="item">
-                <view class="remeber">记住密码:</view>
-                <switch checked name="remeber"/>
-            </view>
-            <view class="item-btn">
-                <button formType="submit">登录</button>
-                <button formType="reset">重置</button>
-            </view>
-        </form>
-    </view>
+  </form>  
+</view>
+<view class="footer_btn">
+  <button class="footer_btn_newad" hover-class="footer_btn_hover" bindtap="onAppoint">立即预约</button>
 </view>

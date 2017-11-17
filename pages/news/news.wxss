@@ -1,47 +1,55 @@
-.news{
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-}
-.news-header{
-    display:flex;
-    flex:1;
-    flex-direction:column;
-    padding:20rpx 30rpx;
-    margin-bottom:30rpx;
-}
-.news-title{
-    display:flex;
-    margin-bottom:20rpx;
-    font-size:40rpx;
-    color:#333;
-}
-.news-time{
-    font-size:24rpx;
-    color:#aaa;
-}
-.news-ad{
-    width:100%;
-}
-.news-box{
-    overflow:hidden;
-    padding:40rpx 20rpx;
-    font-size:34rpx;
-}
 
-.section{
-    display:flex;
-    flex-direction:column;
-    padding:10rpx;
-    margin-bottom:40rpx;
+.mainnew{
+    width: 100%;
+    height: 180px;
+} 
+.mainimg{
+  width: 100%;
 }
-.video{
+.mainfont{
+  font-family: bold;
+  line-height: 30px;
+}
+.text{
+  color:yellowgreen;
+}
+.nav{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.navpis{
+  color:red;
+}
+.navbut-hover{
+  background-color: yellowgreen;
+}
+.container{
     width:100%;
 }
-.music-btn{
-    display:flex;
-    flex-direction:row;
+.newimg{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  width: 100%;
 }
-.music-btn button{
-    font-size:24rpx;
+.imgsrc{
+  width: 100%;
+  height: 500px;
+}
+.newh1{
+  font-size: 48rpx;
+  display: flex;
+  justify-content:center;
+  width: 100%;
+  height: 100rpx;
+  background-color:yellowgreen;
+  color:aliceblue;
+}
+.newh1 text{
+  line-height: 100rpx;
+}
+.newad{
+    width:100%;
 }

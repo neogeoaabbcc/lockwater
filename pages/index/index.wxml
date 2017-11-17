@@ -11,13 +11,12 @@
         </swiper-item>
       </block>
     </swiper>
-
     <!--scroll-view-->
     <scroll-view class="container" scroll-y="true">
-      <!--今日头条-->
+      <!--指纹密码锁-->
       <view class="section">
         <view class="section-header" bindtap="bindMoreTap">
-          <text class="fl title">今日头条</text>
+          <text class="fl title">家庭指纹密码锁系列</text>
           <text class="fr more"> >> </text>
         </view>
         <scroll-view class="scroll-view" scroll-x="true" >
@@ -27,28 +26,28 @@
         </scroll-view>
       </view>
 
-      <!--今日鸡汤-->
+      <!--智能家居系列-->
       <view class="section">
         <view class="section-header" bindtap="bindMoreTap">
-          <text class="fl title">今日鸡汤</text>
+          <text class="fl title">智能家居系列</text>
           <text class="fr more"> >> </text>
         </view>
         <scroll-view class="scroll-view" scroll-x="true" >
           <view class="box">
-            <template is="header-list" data="{{headerList}}" />
+            <template is="middle-list" data="{{middleList}}" />
           </view>
         </scroll-view>
       </view>
 
-      <!--今日推荐-->
+      <!--酒店管理系统-->
       <view class="section">
         <view class="section-header" bindtap="bindMoreTap">
-          <text class="fl title">今日推荐</text>
+          <text class="fl title">酒店管理系统</text>
           <text class="fr more"> >> </text>
         </view>
         <scroll-view class="scroll-view" scroll-x="true" >
           <view class="box">
-            <template is="header-list" data="{{headerList}}" />
+            <template is="footer-list" data="{{footerList}}" />
           </view>
         </scroll-view>
       </view>

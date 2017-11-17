@@ -1,7 +1,7 @@
 /**
   * 将时间转换为字符串
   */
-function formatTime(date) {
+function formatTime(data) {
   var year = date.getFullYear()
   var month = date.getMonth() + 1
   var day = date.getDate()
@@ -9,7 +9,6 @@ function formatTime(date) {
   var hour = date.getHours()
   var minute = date.getMinutes()
   var second = date.getSeconds()
-
 
   return [year, month, day].map(formatNumber).join('-') + ' ' + [hour, minute, second].map(formatNumber).join(':')
 }
@@ -207,8 +206,32 @@ function formatNumber(n) {
          return ret;
      });
  }
+ //图片自适应
+ function imageUtil(e){
+   var imageSize = {};
+   var originalWidth = e.detail.width;
+   var originalHeight = e.detail.height;
+   var originalScale = originalHeight/originalWidth;
+   //获取屏幕宽高
+   wx.getSystemInfo({
+     success:function(res){
+       var windowWidth = res.windowWidth;
+       var windowHeight = res.windowHeight;
+       var windowscale = windowHeight/windowWidth;
+       if(originalScale<windowscale){
+         imageSize.imageWidth = windowWidth;
+         imageSize.imageHeight = (windowWidth * originalHeight) / originalWidth;
+       }else{
+         imageSize.imageHeight = windowHeight;
+         imageSize.imgaeWidth = (windowHeight * originalWidth) / originalHeight;
+       }
+     }
+   })
+   return imageSize;
+ }
 
 module.exports = {
   formatTime: formatTime,
-  dateFormat: dateFormat
+  dateFormat: dateFormat,
+  imageUtil: imageUtil
 }

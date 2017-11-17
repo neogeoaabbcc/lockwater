@@ -13,7 +13,7 @@ App({
   api: api,
   util: util,
   wechat: wechat,
-  uri:'http://www.kunyujie.com/',
+  uri:'',
   onLaunch: function () {
     console.log("appapp is launched")
   },

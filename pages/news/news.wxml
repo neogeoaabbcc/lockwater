@@ -1,22 +1,28 @@
-<scroll-view class="container" scroll-y="true" >
-    <view class="news">
-        <view class="news-header">
-            <text class="news-title">{{news.title}}</text>	
-            <text class="news-time" wx:if="{{news.created}}">
-                <icon type="waiting" size="45" color="red"/>
-                发布于{{news.created}}
-            </text>
-            <text class="news-time" wx:else>
-                <icon type="waiting" size="45" color="red"/>
-                发布于2016-10-27
-            </text>
-        </view>
-        <image class="news-ad" src="{{news.pic}}" wx:if="{{news.pic}}" />
-        <image class="news-ad" src="{{ads}}" wx:elif="{{ads}}" />
-        <image class="news-ad" src="/images/1.jpg" wx:else />
-        <view class="news-box">
-            {{news.content}}
-        </view>
+<!--引入模板-->
+<view class="mainnew">
+  <image class="mainimg" src="{{src}}" mode="widthFix" style="width:{{imagewidth}}px;height:{{imageheight}}px;" bindtap="imageHeader"></image>
+</view>
+<!-- 价格，预约 -->
+<view>
+  <view class="nav" wx:for="{{arraypis}}" wx:for-index="index" wx:for-item="price">
+    <view>
+      <text class="navpis">价格￥{{price.pis}}</text>
     </view>
- 
-</scroll-view>
+    <view>
+      <button class="navbut" hover-class="navbut-hover" size="mini" open-type="contact">预约</button>
+    </view>
+  </view>
+  <view class="text" wx:for="{{arraytext}}" wx:for-index="index" wx:for-item="Text">
+    <text>{{Text.text1}}</text>
+    <text>{{Text.text2}}</text>
+  </view>
+  <!-- 动态图片 -->
+  <view class="container">
+    <block wx:for="{{addSrc}}" wx:for-index="index" wx:for-item="pic">
+      <view class="newh1">
+        <text>{{pic.h1}}</text>
+      </view>
+      <image class="newad" src="{{pic.url}}" mode="{{pic.imgmode}}" style="width:{{imagewidth1}}px;height:{{imageheight1}}px;" bindtap="imageNew"/>
+    </block>  
+  </view>
+</view>

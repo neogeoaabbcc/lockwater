@@ -1,35 +1,33 @@
 <!--waterfall.wxml-->
-<import src="../template/waterfall"/>
-
-<view class="container">
-  
-  <view class="header">
-    <input placeholder="{{keywords}}" bindchange="handleSearch"/>
+<view class="head_logo">
+  <image class="logo" src="../../images/logo.png" mode="widthFix"></image>
+</view>
+<!-- 公司介绍 -->
+<view class="btn_area">
+  <!-- 文字转换 -->
+  <view class="btn_button">
+      <button bindtap="company"  class="navbut" hover-class="navbut_hover">公司简介</button>
+      <button bindtap="comment"  class="navbut" hover-class="navbut_hover">公司案例</button>
   </view>
-
-  <!--下拉-->
-  <scroll-view class="container" scroll-y="true" bindscrolltolower="handleLoadMore">
-    <view class="list">
-      <view class="column" >
-        <!--模板-->
-        <template is="waterfall-list1" data="{{ list1 }}"/>
-      </view>
-
-      <view class="column">
-        <!--模板-->
-        <template is="waterfall-list2" data="{{ list2 }}"/>
-      </view>
+  <view class="btn_image_text">
+    <!-- 图片案例 -->
+    <view class="btn_image">
+      <block wx:for="{{btn_image}}" wx:for-index="index" wx:for-item="img">
+        <image class="btn_img" src="{{img.url}}" mode="{{img.mode}}"></image>
+      </block>
     </view>
-    
-    <view class="tips">
-      <view wx:if="{{ hasMore }}">
-        <image class="tips_load" src="/images/loading.gif" />
-        <text class="tips_text">玩了命的加载中...</text>
-      </view>
-      <view wx:else>
-        <text>没有更多内容了</text>
-      </view>
+    <!-- 文字介绍 -->
+    <view class="btn_view">
+      <text class="btn_text">{{text}}</text>
+      <text>地址：四川省内江市商贸城电商基地9楼\n</text>
+      <text class="call_text">点击拨打电话:</text><button class="call" bindtap="call">08322220968\n</button>
     </view>
-  </scroll-view>
-
+  </view>
+</view>
+<!-- 在线地图 -->
+<view class="map">
+  <view class="map_view">
+    <text class="map_text">内江大奥智能家居位置</text>
+  </view>
+  <map class="map" markers="{{markers}}" scale="15" latitude="{{latitude}}" longitude="{{longitude}}" style="width: 100%; height: 300px;"></map>
 </view>

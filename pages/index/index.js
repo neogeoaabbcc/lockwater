@@ -1,21 +1,24 @@
 //index.js
 "use strict";
-//获取应用实例
+//获取图片
+const url = "http://images-1253562988.picgz.myqcloud.com/"
 var app = getApp();
 Page({
 	data: {
 		//banner
 		imgUrls: [
-			'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-			'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-			'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
+			url + "homemast.png",
+      url + "bilock.png",
+      url + "wxsystem.png",
 		],
 		indicatorDots: true,
 		autoplay: true,
 		interval: 5000,
 		duration: 1000,
-		//今日头条
-		headerList:[]
+		//指纹密码锁图片
+		headerList:[],
+    middleList:[],
+    footerList:[]
 	},
 	//查看更多
 	bindMoreTap: function(){
@@ -26,8 +29,11 @@ Page({
 	onLoad:function(options){
 		// 页面初始化 options为页面跳转所带来的参数
 		var self = this;
+    console.log(data.headerList[0].id);
 		self.setData({
-			headerList:data.headerList
+			headerList:data.headerList,
+      middleList:data.middleList,
+      footerList:data.footerList
 		})
 	},
 	onReady:function(){
@@ -52,31 +58,69 @@ var data = {
 	headerList:[
 		{
 			id:"1",
-			title:"销售火爆的 Pixel 手机不仅延迟出货，利润也直追苹果？",
-			images:"http://p1.pstatp.com/large/1009000da4dd870dec9d"
+			title:"必达i8A1FMT-AN2指纹锁",
+      images:url + "i8a1fmt.png"
 		},
 		{
 			id:"2",
-			title:"谷歌终于推出全新办公利器，直接叫板微软",
-			images:"http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg"
+			title:"必达i2A7FMT-AN2指纹锁",
+      images: url + "i2a8fk.jpg"
 		},
 		{
-			id:"bc046013ad754c91ad14e34e0956f577",
-			title:"央妈再出手，支付宝还能抗多久？",
-			images:"http://p8.pstatp.com/large/101e0002970c50088352"
+			id:"3",
+			title:"必达i1A8FK-AN2指纹锁",
+      images: url + "i3a7fmk.jpg"
 		},
 		{
-			id:"2",
-			title:"谷歌终于推出全新办公利器，直接叫板微软",
-			images:"http://p3.pstatp.com/large/101f0002d60d32fbff00"
+			id:"4",
+			title:"必达G636FM指纹锁",
+			images:url + "g636fm.jpg"
 		},
 		{
-			id:"8dd0a353217d48348232739d992b2680",
-			title:"本周即将发布的苹果Mac新电脑又提前泄漏了",
-			images:"http://p9.pstatp.com/large/1018000f484526ba4b00"
-		}
-		
-	]
+			id:"5",
+			title:"必达v3A8MT-AN2指纹锁",
+			images:url + "v3a8mt.jpg"
+		}	
+	],
+  middleList:[ 
+    {
+      id:"11",
+      title:"自动窗户窗帘系统",
+      images:url + "smartwindow.jpg"
+    },
+    {
+      id: "12",
+      title: "智能灯光系统",
+      images:url + "smartlight.jpg"
+    },
+    {
+      id: "13",
+      title: "安防系统",
+      images:url + "smartalert.jpg"
+    },
+    {
+      id: "14",
+      title: "智能家电控制",
+      images:url + "smartele.jpg"
+    },
+    {
+      id: "15",
+      title: "影音系统",
+      images:url + "smartvideo.jpg"
+    },
+  ],
+  footerList:[
+    {
+      id: "21",
+      title: "必达酒店管理系统",
+      images: url + "hospital.png"
+    },
+    {
+      id: "22",
+      title: "必达酒店微信开锁平台",
+      images: url + "wxsystem.png"
+    }
+  ]
 };
 
 

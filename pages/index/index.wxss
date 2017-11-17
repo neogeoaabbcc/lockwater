@@ -29,7 +29,7 @@
 }
 .title{
 	padding-left:20rpx;
-	border-left:2px solid #eb4f38;
+	border-left:2px solid #6EB92C;
 	font-size:36rpx;
 }
 .more{

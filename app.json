@@ -3,37 +3,37 @@
     
     "pages/index/index",
     "pages/login/login",
-    "pages/my/my",
     "pages/waterfall/waterfall",
     "pages/news/news",
-    "pages/splash/splash"
+    "pages/edit/edit",
+    "pages/save/save"
   ],
   "window":{
-    "backgroundTextStyle":"#999",
-    "navigationBarBackgroundColor": "#272636",
-    "navigationBarTitleText": "微信小程序",
-    "navigationBarTextStyle":"#fff"
+    "backgroundTextStyle":"#999999",
+    "navigationBarBackgroundColor": "#6EB92C",
+    "navigationBarTitleText": "大奥智能家居",
+    "navigationBarTextStyle":"#ffffff"
   },
 	"tabBar": {
-		"color": "#fff",
+		"color": "#ffffff",
 		"selectedColor": "#eb4f38",
-		"backgroundColor": "#333",
+		"backgroundColor": "#6EB92C",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页",
+        "text": "产品介绍",
         "iconPath": "images/home.png",
 				"selectedIconPath": "images/home_actived.png"
       }, 
       {
         "pagePath": "pages/waterfall/waterfall",
-        "text": "瀑布流",
+        "text": "公司简介",
         "iconPath": "images/waterfall.png",
 				"selectedIconPath": "images/waterfall_actived.png"
       },
       {
         "pagePath": "pages/login/login",
-        "text": "我的",
+        "text": "我的预约",
         "iconPath": "images/my.png",
 				"selectedIconPath": "images/my_actived.png"
       }
@@ -44,6 +44,5 @@
 		"downloadFile": 10000
 	},
 	"debug": true,
-  "name": "yyb@4000871428.com",
-   "pwd": "ynqc975132468"
+  "name": "neogeogaup@163.com"
 }

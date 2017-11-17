@@ -1,0 +1,50 @@
+/* pages/save/save.wxss */
+.sroll{
+  width: 100%;
+}
+.radio_group{
+  width: 100%;
+  height:90px;
+  display: flex;
+  flex-direction: column;
+}
+.radio{
+  width: 100%;
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: gainsboro;
+  border:2px solid white;
+  border-radius: 10px;
+}
+.radio radio{
+  display: inline-block;
+
+}
+.radio text{
+  font-size: 28rpx;
+  display: inline-block;
+  font-weight: 700;
+}
+/* 新增地址 */
+.addAddress{
+  width: 100%;
+  position: fixed;
+  display: block;
+}
+.addAddress button{
+  width: 100%;
+  background-color: yellowgreen;
+  height: 60px;
+  color:whitesmoke;
+}
+.addAddress text{
+  height: 60px;
+  line-height: 60px;
+  font-size: 50rpx;
+}
+.addBtn{
+  display:none;
+}

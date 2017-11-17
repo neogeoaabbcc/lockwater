@@ -1,0 +1,31 @@
+<!--pages/edit/edit.wxml-->
+<!-- 修改地址.wxml -->
+<view class="header_input">
+  <text>联系人</text>
+  <view class="input user">
+    <text>姓名：</text><input name="userName" type="text" placeholder='请输入你的名字' bindinput='onUser' maxlength="10" placeholder-class="input_pla" auto-focus value="{{userName}}"></input>
+  </view>
+  <view class="input number">
+    <text>电话：</text><input name="phoNumber" type="number"placeholder='请输入你的手机号码' bindinput='onNumber' maxlength="11" placeholder-class="input_pla" value="{{phNumber}}"></input>
+  </view>
+  <view class="input moststree">
+    <view class="picker">内江市地区选择</view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker"value="{{array[index]}}">当前选择：{{array[index]}}</view>
+    </picker>
+    <view class="moststree_towel">
+      <text>地址：</text><input class="towel" name="towel" type="text" placeholder='地址' bindinput="onTowel" placeholder-class="input_pla" value="{{towel}}"></input>
+    </view>
+    <view class="moststree_towel">
+      <text>街道：</text><input class="stree" name="stree" type="text" placeholder='街道' bindinput="onStree" placeholder-class="input_pla" value="{{stree}}"></input>
+    </view>
+    <view class="moststree_towel">
+      <text>小区：</text><input class="location" name="loaction" type="text" placeholder='' bindinput="onLocation" placeholder-class="input_pla" value="{{location}}"></input>
+    </view>
+  </view>
+</view>
+<view class="footer_btn">
+  <button class="newad footer_btn_newad1" hover-class="footer_btn_hover1" bindtap="onAppoint">保存</button>
+  <button class="newad footer_btn_newad2" hover-class="footer_btn_hover2" bindtap="onDelete">删除</button>
+  <button class="newad footer_btn_newad2" hover-class="footer_btn_hover2" bindtap="onCancel">取消</button>
+</view>

@@ -1,0 +1,22 @@
+<!--pages/save/save.wxml-->
+<scroll-view class="sroll" sroll-y="true">
+  <radio-group class="radio_group" bindchange="radioChange">
+    <label class="radio" wx:for="{{items}}">
+      <radio value="{{item.name}}" checked="{{item.checked}}" bindtap="onRadio"/><text>{{item.value}}</text>
+    </label>
+  </radio-group>
+</scroll-view>
+<!-- 有数据时显示 -->
+<view class="addBtn" style="display:{{show}}">
+  <view><button bindtap="onStroage">保存</button></view>
+  <view><button bindtap="onModify">修改</button></view>
+</view>
+<!-- 数据为空时显示 -->
+<view class="addAddress" style="top:{{top}}px;display:{{none}}">
+  <button bindtap="onAddadr">
+    <text>新增地址</text>
+  </button>
+  <button bindtap="onReturn">
+    <text>返回</text>
+  </button>
+</view>
