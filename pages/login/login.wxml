@@ -14,7 +14,7 @@
     <view class="header_background">
       <picker mode="multiSelector" bindchange="bindChange" bindcolumnchange="bindColumnChange" value="{{productIndex}}" range="{{productArray}}">
         <view class="picker">
-          产品选择：{{productIndex[0][productArray[0]]}},{{productIndex[1][productArray[1]]}}
+           产品选择：{{productArray[0][productIndex[0]]}}-{{productArray[1][productIndex[1]]}}
         </view>
       </picker>
     </view>

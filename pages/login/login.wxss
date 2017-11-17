@@ -36,13 +36,29 @@
   color: red;
 }
 .header_my_text2{
-  line-height: 24px;
+  line-height: 15px;
   font-size:35rpx;
   color: black;
 }
 .header_line{
   width: 100%;
   height:3px;
+}
+.header_background picker{
+  display:inline-block;
+  margin-top: 20px;
+  width:100%;
+  height: 50px;
+  border-radius: 20px;
+}
+.picker{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  font-weight: 700;
 }
 /* footer样式 */
 .footerf_btn{

@@ -6,7 +6,7 @@ Page({
     length:0,
     //产品
     productArray: [["指纹密码锁","智能家居", "酒店管理系统"],["必达i8","必达i2","必达i1","必达g3","必达v3"]],
-    value: [0, 0],
+    productIndex: [0, 0],
   },
   onEdit:function(e){
     wx.navigateTo({
@@ -67,20 +67,27 @@ Page({
           case 0:
             data.productArray[1] = ["必达i8", "必达i2", "必达i1", "必达g3", "必达v3"]
             break;
-        break;
-      case 1:
-        switch(data.productIndex[1]){
           case 1:
-            data.productArray[2] = ["窗户", "灯光", "安防", "家电", "影音"] 
+            data.productArray[1] = ["窗户", "灯光", "安防", "家电", "影音"]
             break;
-          break;
-        }
           case 2:
-            data.productArray[3] = ["管理", "微信"]
+            data.productArray[1] = ["管理","微信"]
             break;
         }
-        data.productIndex[1] = 0;
+      break;
+      // case 1:
+      //   switch(data.productIndex[1]){
+      //     case 0:
+      //       data.productArray[1] = ["窗户", "灯光", "安防", "家电", "影音"]
+      //   }
+      // case 2:
+      //   switch(data.productIndex[2]){
+      //     case 0:
+      //       data.productArray[1] = ["管理", "微信"]
+      //   }
+      //   break;
     }
+    // data.productIndex[2] = 0;
     this.setData(data)
   }
 })
