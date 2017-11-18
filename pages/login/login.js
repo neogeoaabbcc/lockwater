@@ -7,13 +7,35 @@ Page({
     //产品
     productArray: [["指纹密码锁","智能家居", "酒店管理系统"],["必达i8","必达i2","必达i1","必达g3","必达v3"]],
     productIndex: [0, 0],
+    //时间选择
+    date:"2017-01-01"
   },
   onEdit:function(e){
     wx.navigateTo({
       url: '../save/save',
     })
   },
-  onLoad:function(event){
+  onLoad:function(e){
+    let that = this;
+    wx.getStorage({
+      key: 'key',
+      success: function (res) {
+        let length = 1
+        var str = res.data.edit
+        console.log(str.length)
+        if (length == str.length) {
+          that.setData({
+            edit: str,
+            length: 1
+          })
+        } else {
+          that.setData({
+            edit: "",
+            length: 0
+          })
+        }
+      },
+    })
   },
   onReady:function(){
     // 页面渲染完成
@@ -39,6 +61,12 @@ Page({
           })
         }
       },
+    })
+  },
+  bindDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      date: e.detail.value
     })
   },
   onHide:function(){
@@ -75,19 +103,12 @@ Page({
             break;
         }
       break;
-      // case 1:
-      //   switch(data.productIndex[1]){
-      //     case 0:
-      //       data.productArray[1] = ["窗户", "灯光", "安防", "家电", "影音"]
-      //   }
-      // case 2:
-      //   switch(data.productIndex[2]){
-      //     case 0:
-      //       data.productArray[1] = ["管理", "微信"]
-      //   }
-      //   break;
     }
-    // data.productIndex[2] = 0;
     this.setData(data)
+  },
+  formSubmit:function(e){
+    let result = this.data.productArray[][this.data.productIndex[]]
+    console.log('form发生了submit事件，携带数据为：',e.detail.value.selector)
+    console.log("第一个picker为",result)
   }
 })

@@ -12,14 +12,23 @@
    <image class="header_line" src="../../images/line.png"></image>
   <form bindsubmit="formSubmit" bindreset="formReset" >
     <view class="header_background">
-      <picker mode="multiSelector" bindchange="bindChange" bindcolumnchange="bindColumnChange" value="{{productIndex}}" range="{{productArray}}">
+      <picker mode="multiSelector" bindchange="bindChange" bindcolumnchange="bindColumnChange" value="{{productIndex}}" range="{{productArray}}" name="selector">
         <view class="picker">
            产品选择：{{productArray[0][productIndex[0]]}}-{{productArray[1][productIndex[1]]}}
         </view>
       </picker>
+      <picker mode="date" value="{{date}}" start="2017-01-01" end="2050-01-01" bindchange="bindDateChange" name="picker2">
+        <view class="picker">
+          预约时间: {{date}}
+        </view>
+      </picker>
+      <text class="title">请写下你的留言:</text>
+       <view class="section">
+        <textarea placeholder="请留下您的特别需求" focus="{{focus}}" auto-height name="textarea"></textarea>
+      </view>
+    </view>
+    <view class="footer_btn">
+      <button class="footer_btn_newad" hover-class="footer_btn_hover" formType="submit">立即预约</button>
     </view>
   </form>  
-</view>
-<view class="footer_btn">
-  <button class="footer_btn_newad" hover-class="footer_btn_hover" bindtap="onAppoint">立即预约</button>
 </view>
